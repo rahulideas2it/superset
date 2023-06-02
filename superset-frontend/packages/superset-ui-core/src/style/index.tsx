@@ -53,21 +53,21 @@ export const emotionCache = createCache({
 export const styled = emotionStyled;
 
 const defaultTheme = {
-  borderRadius: 4,
+  borderRadius: 2,
   colors: {
     text: {
-      label: '#879399',
-      help: '#737373',
+      label: '#2c5aff',
+      help: '#2c5aff',
     },
     primary: {
-      base: '#20A7C9',
-      dark1: '#1A85A0',
-      dark2: '#156378',
-      light1: '#79CADE',
-      light2: '#A5DAE9',
-      light3: '#D2EDF4',
-      light4: '#E9F6F9',
-      light5: '#F3F8FA',
+      base: '#2c5aff',
+      dark1: '#0038fb',
+      dark2: '#002fef',
+      light1: '#6279ff',
+      light2: '#979ffe',
+      light3: '#c3c5fe',
+      light4: '#e7e8ff',
+      light5: '#e7e8ff',
     },
     secondary: {
       base: '#444E7C',
@@ -119,11 +119,14 @@ const defaultTheme = {
       light2: '#EEF8F3',
     },
     info: {
-      base: '#66BCFE',
-      dark1: '#4D8CBE',
-      dark2: '#315E7E',
-      light1: '#B3DEFE',
-      light2: '#EFF8FE',
+      base: '#2c5aff',
+      dark1: '#0038fb',
+      dark2: '#002fef',
+      light1: '#6279ff',
+      light2: '#979ffe',
+      light3: '#c3c5fe',
+      light4: '#e7e8ff',
+      light5: '#e7e8ff',
     },
   },
   opacity: {

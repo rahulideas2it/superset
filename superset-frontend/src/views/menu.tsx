@@ -37,6 +37,12 @@ import { setupStore } from './store';
 const store = setupStore({ disableDebugger: true });
 const bootstrapData = getBootstrapData();
 const menu = { ...bootstrapData.common.menu_data };
+menu.menu.unshift({
+  name: 'Home',
+  icon: 'fa-home',
+  label: 'Home',
+  url: '/superset/welcome/',
+});
 
 const emotionCache = createCache({
   key: 'menu',

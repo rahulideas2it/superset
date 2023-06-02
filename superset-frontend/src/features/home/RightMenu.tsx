@@ -487,7 +487,7 @@ const RightMenu = ({
               </Menu.Item>
             </Menu.ItemGroup>,
           ]}
-          {(navbarRight.version_string || navbarRight.version_sha) && [
+          {/* {(navbarRight.version_string || navbarRight.version_sha) && [
             <Menu.Divider key="version-info-divider" />,
             <Menu.ItemGroup key="about-section" title={t('About')}>
               <div className="about-section">
@@ -513,7 +513,7 @@ const RightMenu = ({
                 )}
               </div>
             </Menu.ItemGroup>,
-          ]}
+          ]} */}
         </SubMenu>
         {navbarRight.show_language_picker && (
           <LanguagePicker

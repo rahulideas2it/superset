@@ -68,16 +68,23 @@ const LocationPathnameLogger = () => {
   return <></>;
 };
 
+const menuData = bootstrapData.common.menu_data;
+menuData.menu.unshift({
+  name: 'Home',
+  icon: 'fa-home',
+  label: 'Home',
+  url: '/superset/welcome/',
+});
+
+console.log(menuData)
+
 const App = () => (
   <Router>
     <ScrollToTop />
     <LocationPathnameLogger />
     <RootContextProviders>
       <GlobalStyles />
-      <Menu
-        data={bootstrapData.common.menu_data}
-        isFrontendRoute={isFrontendRoute}
-      />
+      <Menu data={menuData} isFrontendRoute={isFrontendRoute} />
       <Switch>
         {routes.map(({ path, Component, props = {}, Fallback = Loading }) => (
           <Route path={path} key={path}>

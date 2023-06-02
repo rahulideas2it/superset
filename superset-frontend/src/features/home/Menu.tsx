@@ -243,22 +243,24 @@ export function Menu({
       <Global styles={globalStyles(theme)} />
       <Row>
         <Col md={16} xs={24}>
-          <Tooltip
-            id="brand-tooltip"
-            placement="bottomLeft"
-            title={brand.tooltip}
-            arrowPointAtCenter
-          >
-            {isFrontendRoute(window.location.pathname) ? (
-              <GenericLink className="navbar-brand" to={brand.path}>
-                <img src={brand.icon} alt={brand.alt} />
-              </GenericLink>
-            ) : (
-              <a className="navbar-brand" href={brand.path}>
-                <img src={brand.icon} alt={brand.alt} />
-              </a>
-            )}
-          </Tooltip>
+          {brand.icon && (
+            <Tooltip
+              id="brand-tooltip"
+              placement="bottomLeft"
+              title={brand.tooltip}
+              arrowPointAtCenter
+            >
+              {isFrontendRoute(window.location.pathname) ? (
+                <GenericLink className="navbar-brand" to={brand.path}>
+                  <img src={brand.icon} alt={brand.alt} />
+                </GenericLink>
+              ) : (
+                <a className="navbar-brand" href={brand.path}>
+                  <img src={brand.icon} alt={brand.alt} />
+                </a>
+              )}
+            </Tooltip>
+          )}
           {brand.text && (
             <div className="navbar-brand-text">
               <span>{brand.text}</span>
